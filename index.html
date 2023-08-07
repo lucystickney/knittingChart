@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Karma:wght@300&family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <title>The Knitting Chart</title>
+    <style>
+        html {
+            background: #CEC5BD;
+        }
+        body {
+            background: #CEC5BD;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+        h1 {
+            color: #3D405B;
+            font-family: 'Inconsolata', monospace;
+            font-size: 36px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        p {
+            color: #3D405B;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 5px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-top: 10px;
+                
+
+        }
+        .row1 {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            margin-top: 50px;
+            overflow: hidden;
+            
+        }
+        .row2 {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            overflow: hidden;
+            
+        }
+        
+        .column {
+            flex: 1; 
+            display: flex;
+            flex-direction: column;
+
+        }
+        .colorSquare1, .colorSquare2, .colorSquare3, .colorSquare4 {
+           
+            
+            
+            flex-shrink: 0;
+            display: flex;
+            
+           
+            flex-direction: row; /* Make the content of color squares arrange in a row */
+            
+           
+        }
+        .bigSquare1, .bigSquare2, .bigSquare3, .bigSquare4 {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            border-radius: 10px;
+           /* border: 1px solid #3D405B; /* Replace #000 with your desired border color */
+            margin: 5px;
+            
+            
+        }
+        .bigSquare1 {
+            background: #3D405B;
+        }
+        
+        .bigSquare2 {
+            background: #3D405B;
+        }
+        
+        .bigSquare3 {
+            background: #3D405B;
+        }
+
+        .bigSquare4 {
+            background: #3D405B;
+        }
+        
+        .knittingChart {
+            grid-template-columns: repeat(10, 70px); /* Adjust the size as needed */
+            grid-template-rows: repeat(10, 70px);    /* Adjust the size as needed */
+            display: grid;
+            margin: 25px;
+            
+
+        }
+        .knittingChartMini {
+            grid-template-columns: repeat(10, 20px); /* Adjust the size as needed */
+            grid-template-rows: repeat(10, 20px);    /* Adjust the size as needed */
+            display: grid;
+
+        }
+        .royalblue {
+            background-color: royalblue;
+        }
+
+        .skyblue {
+            background-color: skyblue;
+        }
+
+        .slategray {
+            background-color: slategray;
+        }
+        .rosybrown {
+            background-color: rosybrown;
+        }
+        .cadetblue {
+            background-color: cadetblue;
+        }
+        .plum {
+            background-color: plum;
+        }
+        .lightseagreen {
+            background-color: lightseagreen;
+        }
+        .khaki {
+            background-color: khaki;
+        }
+        .snow {
+            background-color: snow;
+        }
+        .honeydew {
+            background-color: honeydew;
+        }
+        .thistle {
+            background-color: thistle;
+        }
+        .indigo {
+            background-color: indigo;
+        }
+        .wheat {
+            background-color: wheat;
+        }
+        .goldenrod {
+            background-color: goldenrod;
+        }
+        .sandybrown {
+            background-color: sandybrown;
+        }
+        .seashell {
+            background-color: seashell;
+        }
+        .salmon {
+            background-color: salmon;
+        }
+        .seagreen {
+            background-color: seagreen;
+        }
+
+
+       
+
+/* ... and so on for other color classes ... */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="column">
+                <div class="knittingChart">
+                    <!-- Grid of squares will go here -->
+                </div>
+            </div>
+            <div class="column">
+                <h1 class="Title">The Knitting Chart</h1>
+                <p>Looking for some knitting inspiration? This is a randomly 
+                    generated knitting chart. If you like what you see, find 
+                    more information below. If not, refresh the page to 
+                    generate a new chart. </p>
+                
+                <div class="colorSquare1">
+                    
+                    <div class="bigSquare1"></div>
+                    <p id="colorName1">Hex Color</p>
+                        
+                </div>
+                <div class="colorSquare2">
+                    
+                    <div class="bigSquare2"></div>
+                    <p id="colorName2">Hex Color</p>
+                </div>
+                <div class="colorSquare3">
+                    
+                    <div class="bigSquare3"></div>
+                    <p id="colorName3">Hex Color</p>
+                        
+                </div>
+                <div class="colorSquare4">
+                    
+                    <div class="bigSquare4"></div>
+                    <p id="colorName4">Hex Color</p>
+                        
+                </div>
+          
+            </div>
+        </div>
+        <div class="row1">
+            
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini"></div>
+            <div class="knittingChartMini"></div>
+
+             
+        </div>
+        <div class="row2">
+            
+            <div class="knittingChartMini"></div>
+            <div class="knittingChartMini"></div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini"></div>
+
+             
+        </div>
+    </div>
+    <script>
+        const allColors = ['royalblue', 'skyblue', 'slategray', 'rosybrown', 'cadetblue', 'plum', 'lightseagreen', 'khaki', 'snow', 'honeydew', 'thistle', 'indigo', 'wheat', 'goldenrod', 'sandybrown', 'seashell', 'salmon', 'seagreen'];
+        const colors = [];
+        const colorName1 = document.getElementById('colorName1');
+        const colorName2 = document.getElementById('colorName2');
+        const colorName3 = document.getElementById('colorName3');
+        const colorName4 = document.getElementById('colorName4');
+        const randomColor1 = allColors[Math.floor(Math.random() * allColors.length)];
+        colors.push(randomColor1);
+        const randomColor2 = allColors[Math.floor(Math.random() * allColors.length)];
+        const randomColor3 = allColors[Math.floor(Math.random() * allColors.length)];
+        const randomColor4 = allColors[Math.floor(Math.random() * allColors.length)];
+        colors.push(randomColor2);
+        colors.push(randomColor3);
+        colors.push(randomColor4);
+        console.log(colors);
+        colorName1.textContent = randomColor1;
+        colorName2.textContent = randomColor2;
+        colorName3.textContent = randomColor3;
+        colorName4.textContent = randomColor4;
+        bigSquare1 = document.querySelector('.bigSquare1');
+        bigSquare2 = document.querySelector('.bigSquare2');
+        bigSquare3 = document.querySelector('.bigSquare3');
+        bigSquare4 = document.querySelector('.bigSquare4');
+        bigSquare1.classList.add(colors[0]);
+        bigSquare2.classList.add(colors[1]);
+        bigSquare3.classList.add(colors[2]);
+        bigSquare4.classList.add(colors[3]);
+        
+        const knittingChartMiniContainers = document.querySelectorAll('.knittingChartMini'); // find the class knitting chart
+        const knittingChartContainer = document.querySelector('.knittingChart');
+        console.log(knittingChartMiniContainers);
+        //knittingChart.style.gridTemplateColumns = 'repeat(10, 15px)';
+        //knittingChart.style.gridTemplateRows = 'repeat(10, 15px)';    // Adjust the size as needed
+        function generateKnittingChart(container) {
+        // create grid dynamically
+            for (let i = 0; i < 10 * 10; i++) {
+                const square = document.createElement('div');
+                square.classList.add('square');
+                square.style.margin = '1px'; // Adjust the margin as needed
+               // if (i % 10 === 0){
+                  //  const paragraph = document.createElement('p');
+                 //   number = i / 10;
+                 //   paragraph.textContent = number.toString();
+                //    square.appendChild(paragraph);
+              //  }
+
+                const randomColor = colors[Math.floor(Math.random() * colors.length)];
+                square.classList.add(randomColor);
+                
+
+
+                square.addEventListener('click', () => {
+                    square.classList.toggle(randomColor);
+                });
+
+                container.appendChild(square); 
+            }
+        }
+        generateKnittingChart(knittingChartContainer);
+
+    // Clone the pattern for the second grid
+
+    // Clone the pattern for each .knittingChartMini container
+    knittingChartMiniContainers.forEach((miniContainer) => {
+        miniContainer.innerHTML = knittingChartContainer.innerHTML;
+    });
+    //knittingChartContainers[0].innerHTML = knittingChartContainer.innerHTML;
+    //knittingChartContainers[1].innerHTML = knittingChartContainer.innerHTML;
+
+    </script>
+</body>
+</html>
