@@ -10,9 +10,8 @@
     <title>The Knitting Chart</title>
     <style>
 
-       
-
         
+
         html {
             background: #CEC5BD;
         }
@@ -58,7 +57,7 @@
             overflow: hidden;
             
         }
-        .row2 {
+        .row2, .row3 {
             display: flex;
             flex-wrap: nowrap;
             flex-direction: row;
@@ -180,16 +179,91 @@
         .seagreen {
             background-color: seagreen;
         }
-         @media (max-width: 650px) {
+        .beetroot {
+            background-color: #6c1816;
+        }
+        .irishmoss {
+            background-color: #24494d;
+        }
+        .apricot {
+            background-color: #b55339;
+        }
+        .peridot {
+            background-color: #66782e;
+        }
+        .summerskyheather {
+            background-color: #5b8389
+        }
+        .sterlingblue {
+            background-color: #9db0c9
+        }
+        .periwinkle {
+            background-color: #404e83
+        }
+        .peony {
+            background-color: #894d61;
+        }
+        .juliet {
+            background-color: #57191e;
+        }
+        .frost {
+            background-color: #b1ada3;
+        }
+        .dove {
+            background-color: #a8a8c0;
+        }
+        .breeze {
+            background-color: #94c8cf;
+        }
+        .grapes {
+            background-color: #9a963d;
+        }
+        .minty {
+            background-color: #b7d2c5;
+        }
+        .babysunshine {
+            background-color: #ede4b4;
+        }
+        .pesto {
+            background-color: #545a35;
+        }
+        .celerygreen {
+            background-color: #aaae68;
+        }
+        .crabapple {
+            background-color: #a05c52;
+        }
+        .cabernet {
+            background-color: #2f1021;
+        }
+        .driedherb {
+            background-color: #6e682f;
+        }
+        .petuniaheather {
+            background-color: #5d4960;
+        }
+        .frostedalmond {
+            background-color: #857770;
+        }
+
+        
+        
+
+        /* change from 300 - 700 --> knitting chart 20px
+
+        then below 300 is this: */
+        @media (max-width: 650px) {
             /* Your styles for screens smaller than 650 pixels go here */
-            /* For example: */
+            
             
             
             .knittingChart {
-                grid-template-columns: repeat(10, 30px); /* Adjust as needed */
-                grid-template-rows: repeat(10, 30px);    /* Adjust as needed */
+                grid-template-columns: repeat(10, 10px); /* Adjust as needed */
+                grid-template-rows: repeat(10, 10px);    /* Adjust as needed */
             }
         }
+
+
 
        
 
@@ -214,24 +288,24 @@
                 <div class="colorSquare1">
                     
                     <div class="bigSquare1"></div>
-                    <p id="colorName1">Hex Color</p>
+                    <p id="colorName1"></p>
                         
                 </div>
                 <div class="colorSquare2">
                     
                     <div class="bigSquare2"></div>
-                    <p id="colorName2">Hex Color</p>
+                    <p id="colorName2"></p>
                 </div>
                 <div class="colorSquare3">
                     
                     <div class="bigSquare3"></div>
-                    <p id="colorName3">Hex Color</p>
+                    <p id="colorName3"></p>
                         
                 </div>
                 <div class="colorSquare4">
                     
                     <div class="bigSquare4"></div>
-                    <p id="colorName4">Hex Color</p>
+                    <p id="colorName4"></p>
                         
                 </div>
           
@@ -279,27 +353,119 @@
 
              
         </div>
+        <div class="row3">
+            
+            <div class="knittingChartMini"></div>
+            <div class="knittingChartMini"></div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini">
+
+            </div>
+            <div class="knittingChartMini"></div>
+
+             
+        </div>
     </div>
     <script>
-        const allColors = ['royalblue', 'skyblue', 'slategray', 'rosybrown', 'cadetblue', 'plum', 'lightseagreen', 'khaki', 'snow', 'honeydew', 'thistle', 'indigo', 'wheat', 'goldenrod', 'sandybrown', 'seashell', 'salmon', 'seagreen'];
+        const allColorsDict = {'royalblue': "https://www.officesupply.com/craft-supplies/knit-crochet/yarn/yarn/bernat-super-value-yarn-royal-blue/p411621.html?ref=pla&utm_source=google&utm_medium=cpc&adpos=&scid=scplp411621&sc_intid=411621&gclid=Cj0KCQjwz8emBhDrARIsANNJjS6zZSRbr7a05yQOW42GQHyl9Rb2PA6XdZgsub-cCHVOZXomEam2xGgaAsDjEALw_wcB", 
+        'skyblue': "https://www.yarnspirations.com/bernat-super-value-yarn--197g-7-oz---sky/16405308879.html?gclid=Cj0KCQjwz8emBhDrARIsANNJjS5A3MQRM9lqpS_fbsb5KOs-KstSeXEe9Eyl_LtVUM0uMnAdfwd-ju0aAvF9EALw_wcB", 
+        'slategray': "https://www.yarn.com/products/berroco-comfort-1?sku=BER-COMFO-9723&utm_source=google&utm_medium=cpc&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5qUp4mvlQd3KcvXzPGM3q4iVIo2gFC6gpEY3q9IKv3DiEmRj2i8mYaAm0xEALw_wcB", 
+        'cadetblue': "https://www.michaels.com/product/lt-soft-and-shiny-cadet-blue-10664979?cm_mmc=PLASearch-_-google-_-MICH_Shopping_US_N_Knitting+%26+Crochet_N_PMAX_BOPIS_N-_-&Kenshoo_ida=&kpid=go_cmp-18514200212_adg-_ad-__dev-c_ext-_prd-10664979&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5bI9JMq_QyZjxnuJ7kM8xydslGy-HKpSEZImOD6mvVzFSXYgf28aUaAqroEALw_wcB", 
+        'plum': "https://hobbii.com/rainbow-cotton-8-4?option=9637&store_id=20&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4j57Ip6Kgao2gPmll3tBCGve7i48SoErvcij_M13qgqjCJ5sKxM5caAi12EALw_wcB", 
+        'lightseagreen': "https://lindehobby.com/drops-128/drops-muskat-p92?gclid=Cj0KCQjwz8emBhDrARIsANNJjS64bBmVNnva4iQvhHlGfpKlsuBPYALNA49Qpstz8CYxy-i_z4Mh0nAaArS3EALw_wcB#vid:287", 
+        'khaki': "https://www.joann.com/6oz-solid-medium-weight-acrylic-380yd-value-yarn-by-big-twist/16800534.html?gclid=Cj0KCQjwz8emBhDrARIsANNJjS57JbLb92kmGb-yy32FoctjsyZE1Y-da2TGcAvGltwIKOAUWP-VuPUaAqawEALw_wcB", 
+        'snow': "https://www.yarn.com/products/berroco-ultra-wool?sku=BER-ULTWL-03300&utm_source=google&utm_medium=cpc&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5Q2mk2vCnQrw2XrZSRIM3HTvWdXAfOIckTlgyZnRGArHPl2Gw6jTAaAqAtEALw_wcB", 
+        'thistle': "https://www.premieryarns.com/products/pbasix?variant=32768540573778&gclid=Cj0KCQjwz8emBhDrARIsANNJjS6qDaKbN1zdynSluqDiWQVH9XBNyEb6ECPokF-dWwW1Dm8x9zqv5ccaAhSPEALw_wcB", 
+        'indigo': "https://www.lovecrafts.com/en-us/p/malabrigo-worsted/YMA003_088?utm_source=google&utm_source=google&utm_medium=cpc&utm_medium=cpc&country=US&utm_campaign=19184465416&utm_term&gclid=Cj0KCQjwz8emBhDrARIsANNJjS62EoeaXHDQkq3Wb_KIV7gcpvRuKGLGpYl7CDg-ocWoqE_lCIPVDHkaAkSREALw_wcB", 
+        'wheat': "https://www.lovecrafts.com/en-us/p/berroco-ultra-wool/10140571?utm_source=google&utm_source=google&utm_medium=cpc&utm_medium=cpc&country=US&utm_campaign=19249415191&utm_term&gclid=Cj0KCQjwz8emBhDrARIsANNJjS6vnfgpY7o1viRsdY3LuPekdku_ozDOO3Xx7xLe50z600bOdqNsZXIaAlgmEALw_wcB", 
+        'goldenrod': "https://onebighappy.com/products/berroco-comfort-worsted-yarn?variant=36250906198177&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5BsP6Et_JjF1qqRItE_gV3MCbRA7Qk82gchGPrnuhufSBMaa_s2pcaAqDgEALw_wcB", 
+        'salmon': "https://www.herrschners.com/herrschners-worsted-8-yarn/?sku=0100931060&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5E1siTcC60-JHidY-E92UvhyiAu9KsFAiY5vsRagqhFx2djBnqqpEaAluTEALw_wcB", 
+        'beetroot': 'https://onebighappy.com/products/berroco-comfort-worsted-yarn?variant=36250906034337&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4MWvbX7-wsN1BefibYvOg4r1oeBT20qQj2GHbLxqjNGRbHV5A2_eUaAoGMEALw_wcB', 
+        'irishmoss': 'https://filloryyarn.com/products/berroco-remix-light?variant=39495472283700', 
+        'apricot': 'https://filloryyarn.com/products/berroco-remix-light?variant=39495472316468&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4UF0qEXn-hJVg9C59aqRotukymc3hEeFKBQVXZ70fEUu6PZY6-GzsaAhj3EALw_wcB', 
+        'peridot': 'https://www.lovecrafts.com/en-us/p/cascade-yarns-220-superwash-merino/10184254?utm_source=google&utm_source=google&utm_medium=cpc&utm_medium=cpc&country=US&utm_campaign=18150455667&utm_term&gclid=Cj0KCQjwz8emBhDrARIsANNJjS7A3LTD7PbEy4b7ybMZBNgZhY4isbwNAuY-cVlbk_bvuXtOzmt4vsUaAgVKEALw_wcB', 
+        'summerskyheather': 'https://www.lovecrafts.com/en-us/p/cascade-220-superwash/YCS002_0844?utm_source=google&utm_source=google&utm_medium=cpc&utm_medium=cpc&country=US&utm_campaign=18150455667&utm_term&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5UKJdc2F5P01ieYYwJONNcnfKfTCvNPyuB9nezSYFNQZ7tPDcFeo4aAov4EALw_wcB', 
+        'sterlingblue': 'https://www.jimmybeanswool.com/knitting/yarn/Cascade/220Superwash.asp?specPCVID=87123&advSourceID=9&gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS6YlgRDb09LnXI6bqdQnGn9h-0jmv0NcEx-Ut5vAvLgAmD9GkGMsogaAh4fEALw_wcB', 
+        'periwinkle': 'https://www.lovecrafts.com/en-us/p/cascade-220-superwash/YCS002_0844?utm_source=google&utm_source=google&utm_medium=cpc&utm_medium=cpc&country=US&utm_campaign=18150455667&utm_term&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5UKJdc2F5P01ieYYwJONNcnfKfTCvNPyuB9nezSYFNQZ7tPDcFeo4aAov4EALw_wcB', 
+        'peony': 'https://michiganfineyarns.com/products/berroco-remix-light?variant=32398601748522&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&utm_source=%7Bgoogle%7Dcampaignid%3D18308473677&adgroupid=&keyword=&device=c&gclid=Cj0KCQjwz8emBhDrARIsANNJjS7JrNAIFD-u0Z-rQUdjAuu4IMJbbp8Iyd5y0nZxF5J-QjjkPetbHPQaAvh_EALw_wcB', 
+        'juliet': 'https://www.lovecrafts.com/en-us/p/berroco-ultra-wool/10140624?utm_source=google&utm_source=google&utm_medium=cpc&utm_medium=cpc&country=US&utm_campaign=19184465416&utm_term&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4aSzXEN0FqdWp5OJLIvFAgyDE88DtFv4R-Zd-xsf-wpAB5BCIauIQaAvAeEALw_wcB', 
+        'frost': 'https://www.jimmybeanswool.com/knitting/yarn/Berroco/UltraWool.asp?specPCVID=82016&advSourceID=9&gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5cJGGWL71bqyjCnZrgXfNGbWUCRl4NUk9OCBCdNKrwyECMtJNqcNsaAn7YEALw_wcB', 
+        'dove': 'https://www.jimmybeanswool.com/knitting/yarn/Berroco/UltraWoolDK.asp?specPCVID=96220&advSourceID=9&gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4OiPWjs_untJEwfG8G_jmA_587HlVzZPlKo89Ho6iro2F6OwCCD3QaAjT3EALw_wcB', 
+        'breeze': 'https://www.jimmybeanswool.com/knitting/yarn/Berroco/UltraWoolDK.asp?specPCVID=96218&advSourceID=9&gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS7ibLESj341gSBzNtJTDqyvVssFYJTjDo4dXnO64zDZ57WrOVuLygAaAr5aEALw_wcB', 
+        'grapes': 'https://www.lovecrafts.com/en-us/p/berroco-vintage/10187958?utm_source=google&utm_source=google&utm_medium=cpc&utm_medium=cpc&country=US&utm_campaign=19184465416&utm_term&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4kXKkxM9qI4LTSVqlg0faSzUsoJln6yKtpVEXtXqTJiMCztvTmHgcaAn4EEALw_wcB', 
+        'minty': 'https://www.jimmybeanswool.com/knitting/yarn/Berroco/Vintage.asp?specPCVID=18102&advSourceID=9&gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS75pHQVy1Dgqjw-RZ-yEbf2CJjSSAmO_tzadXZ2WViePx5Q7ff2xDcaAkVKEALw_wcB', 
+        'babysunshine': 'https://www.marymaxim.com/products/caron-simply-soft-yarn?currency=USD&variant=41986100756647&utm_medium=cpc&utm_source=google&utm_campaign=Google%20Shopping&tw_source=google&tw_adid=598663081352&tw_campaign=17286670063&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4MK2IQF1oz9NCpoyhAYG8XDa9B3xCYyUKpkfLrVCkdoz2cjXxAeeYaAvU-EALw_wcB', 
+        'pesto': 'https://paradisefibers.com/products/cascade-aegean-tweed-sport?currency=USD&variant=41758263476400&utm_medium=cpc&utm_source=google&utm_campaign=Google%20Shopping&gclid=Cj0KCQjwz8emBhDrARIsANNJjS5g9JdvMtigQCwVa9cFSO5u_wV5oMj521Dgq3cuBvCBO2JUgqxTJTsaAuM-EALw_wcB', 
+        'celerygreen': 'https://www.yarn.com/products/cascade-yarns-anchor-bay?sku=CAS-ANCBAY-046&utm_source=google&utm_medium=cpc&gclid=Cj0KCQjwz8emBhDrARIsANNJjS6ChVDDauyteV_e9cws_UP1Nsx8ZCZHJNYQlLA-QaqEhSXzivB83dYaAkxkEALw_wcB', 
+        'crabapple': 'https://www.eatsleepknit.com/cshop/product/Cascade-Yarns-Cascade-220/23892/?gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS6LnEImn4bGgQlNPNeaEqgOKlEqRMV_5LE1SvNgFxz9QaZPUfEF4mQaArpBEALw_wcB', 
+        'cabernet': 'https://www.jimmybeanswool.com/knitting/yarn/Cascade/Cascade220.asp?specPCVID=24983&advSourceID=9&gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS7FfeCUcktsfr0NM5FH-4ful9t0AIeOabmP9z86tHv-Ofb3cBbSAmIaAjeaEALw_wcB', 
+        'driedherb': 'https://www.eatsleepknit.com/cshop/product/Cascade-Yarns-Cascade-220/28636/?gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS7h7csCkAs1bRJNwOwdBO21d0fVAt6NaGmuI9QBMn6CxwzBt60gqL0aAjqoEALw_wcB', 
+        'petuniaheather': 'https://www.eatsleepknit.com/cshop/product/Cascade-Yarns-220-Superwash/23878/?gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS4Xex2TIE0W9pgIvu72qSwYefCr1ufs-o2yzDG3QG-FmlBAq0cpvb0aAnPIEALw_wcB',
+        'frostedalmond': 'https://www.eatsleepknit.com/cshop/product/Cascade-Yarns-220-Superwash/18146/?gad=1&gclid=Cj0KCQjwz8emBhDrARIsANNJjS6WxKZgWxGFZxQfCKqWbeKnONju_PYsnlYeqY1Lv4Rck3yMmUqqyGkaAr7tEALw_wcB'
+        };
+        const allColors = ['royalblue', 'skyblue', 'slategray', 'cadetblue', 'plum', 'lightseagreen', 'khaki', 'snow', 'thistle', 'indigo', 'wheat', 'goldenrod', 'salmon', 'beetroot', 'irishmoss', 'apricot', 'peridot', 'summerskyheather', 'sterlingblue', 'periwinkle', 'peony', 'juliet', 
+                            'frost', 'dove', 'breeze', 'grapes', 'babysunshine', 'pesto', 'celerygreen', 'crabapple', 'cabernet', 'driedherb', 'petuniaheather', 'frostedalmond'];
         const colors = [];
         const colorName1 = document.getElementById('colorName1');
         const colorName2 = document.getElementById('colorName2');
         const colorName3 = document.getElementById('colorName3');
         const colorName4 = document.getElementById('colorName4');
         const randomColor1 = allColors[Math.floor(Math.random() * allColors.length)];
+
         colors.push(randomColor1);
+
         const randomColor2 = allColors[Math.floor(Math.random() * allColors.length)];
         const randomColor3 = allColors[Math.floor(Math.random() * allColors.length)];
         const randomColor4 = allColors[Math.floor(Math.random() * allColors.length)];
+
         colors.push(randomColor2);
         colors.push(randomColor3);
         colors.push(randomColor4);
+
         console.log(colors);
-        colorName1.textContent = randomColor1;
-        colorName2.textContent = randomColor2;
-        colorName3.textContent = randomColor3;
-        colorName4.textContent = randomColor4;
+
+        //colorName1.textContent = randomColor1;
+        //colorName2.textContent = randomColor2;
+        //colorName3.textContent = randomColor3;
+       //colorName4.textContent = randomColor4;
+
+        const link1 = document.createElement('a');
+        const link2 = document.createElement('a');
+        const link3 = document.createElement('a');
+        const link4 = document.createElement('a');
+
+        const yarn1 = allColorsDict[randomColor1];
+        const yarn2 = allColorsDict[randomColor2];
+        const yarn3 = allColorsDict[randomColor3];
+        const yarn4 = allColorsDict[randomColor4];
+
+       
+        link1.href = yarn1;
+        link2.href = yarn2;
+        link3.href = yarn3;
+        link4.href = yarn4;
+        link1.textContent = randomColor1;
+        link2.textContent = randomColor2;
+        link3.textContent = randomColor3;
+        link4.textContent = randomColor4;
+        link1.target = "_blank"; // Open the link in a new window/tab
+        link2.target = "_blank"; 
+        link3.target = "_blank"; 
+        link4.target = "_blank"; 
+
+        colorName1.appendChild(link1);
+        colorName2.appendChild(link2);
+        colorName3.appendChild(link3);
+        colorName4.appendChild(link4);
+
         bigSquare1 = document.querySelector('.bigSquare1');
         bigSquare2 = document.querySelector('.bigSquare2');
         bigSquare3 = document.querySelector('.bigSquare3');
